@@ -12,9 +12,12 @@
 
     <h1 id="demo">hello <span>hello</span></h1>
 
-    <!-- [event handler] -->
-    <button onclick="alert('hello! this is alert msg with click event')">click me</button>
-    <button onmouseover="alert('hello! this is alert msg with mouseover event')">hover me</button>
+        <input type="text" name="email" id="email" value="name">
+
+        <!-- [event handler] -->
+        <button>click me</button>
+
+    <!-- <button onmouseover="alert('hello! this is alert msg with mouseover event')">hover me</button> -->
 
 
     <!-- [ internal javascript code] -->
@@ -24,6 +27,18 @@
         let h1text = document.getElementById('demo');
 
         h1text.innerHTML = "This text is from Javascript using innerHTML";
+
+        let email = document.querySelector('.email').value;
+        let button = document.querySelector('button');
+        let input = "";
+        button.addEventListener('click', () => {
+            input += email;
+            console.log(input);
+        })
+
+        // function msgFucntion() {
+        //    return message.innerHTML = emailValue;
+        // }
 
     </script>
 

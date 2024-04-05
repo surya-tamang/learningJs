@@ -34,12 +34,12 @@ let text = "Text for basic string methods basic input";
 
 let textLength = text.length;
 
-let valid = text.includes("gmail","yahoo","hotmail");
+let valid = text.includes("gmail", "yahoo", "hotmail");
 console.log(valid);
 
 let letter = text[7];
 
-let string = text.substring(0, (text.length-2)); // subString (start , end)
+let string = text.substring(0, (text.length - 2)); // subString (start , end)
 
 
 console.log(text); // prints the string stored in variable text
@@ -51,17 +51,17 @@ console.log(string)
 let stringmatch = text.matchAll(/basic/gi);
 
 console.log(Array.from(stringmatch));
- let carName = "ford";
+let carName = "ford";
 
- let carintro = `i hava a car named ${carName}`;
+let carintro = `i hava a car named ${carName}`;
 
- console.log(carintro);
+console.log(carintro);
 
 
 
 //  creating and array 
 
-const employess = ["ram", "shyam","hari"];
+const employess = ["ram", "shyam", "hari"];
 console.log(employess[2]);
 
 const cars = new Array("ford", "volvo", "toyoto");
@@ -69,8 +69,8 @@ cars.push("ferrari");
 console.log(cars);
 
 let list = "<ul>";
-cars.forEach((value)=>{
-list+= "<li>" + value + "</li>";
+cars.forEach((value) => {
+    list += "<li>" + value + "</li>";
 })
 
 list += "</ul>";
@@ -80,6 +80,27 @@ console.log(list);
 // let arrayToString = cars.toString();
 // console.log(arrayToString);
 
+
+
+// javascript get date methods
+
 let date = new Date();
-date.toString();
-console.log(date);
+let customDate = new Date();
+
+customDate.setFullYear(2015, 1, 25); // own date
+
+console.log(customDate);
+
+let year = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDay();
+
+let fullyear = [year, month, day];
+console.log(fullyear.toString());
+
+if (date > customDate) {
+    console.log("you are born");
+} else {
+    console.log("You are not born yet");
+}
+
