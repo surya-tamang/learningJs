@@ -5,11 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <input type="text" name="email" id="email">
-    <button type="submit">Submit</button>
+    <button type="submit" id="submit">Submit</button>
+
+    <button class="darkMode">Dark Mode</button>
 
 
     <div>
@@ -18,25 +33,40 @@
 
     <script>
         let email = document.querySelector('#email');
-        let button = document.querySelector('button');
+        let button = document.querySelector('#submit');
+        let darkModeButton = document.querySelector('.darkMode');
+        // let bodyElement = document.body;
+
 
         let validData = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
         // let isValid = email.value.includes("gmail");
-// 
 
         button.addEventListener('click', () => {
-            if (email.value.match(validData)) {
-                // alert('valid email');
-                document.querySelector('.result').innerHTML = email.value;
-                return true;
-            }
-            else{
-                // alert('invalid email');
-                document.querySelector('.result').innerHTML = "Invalid email";
-                return false;
-            }
+            email.value.match(validData) ? showEmail() : showerror();
         })
+
+
+        darkModeButton.addEventListener('click', () => {
+            changeToDark();
+        })
+
+        function changeToDark() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            if (darkModeButton.innerHTML === "Dark Mode") {
+                darkModeButton.innerHTML = "Light Mode"
+            } else {
+                darkModeButton.innerHTML = "Dark Mode"
+            }
+        }
+
+        function showEmail() {
+            document.querySelector('.result').innerHTML = email.value;
+        }
+        function showerror() {
+            document.querySelector('.result').innerHTML = "Invalid email";
+        }
     </script>
 </body>
 
