@@ -89,6 +89,8 @@ let customDate = new Date();
 
 customDate.setFullYear(2015, 1, 25); // own date
 
+
+
 console.log(customDate);
 
 let year = date.getFullYear();
@@ -96,6 +98,7 @@ let month = date.getMonth();
 let day = date.getDay();
 
 let fullyear = [year, month, day];
+
 console.log(fullyear.toString());
 
 if (date > customDate) {

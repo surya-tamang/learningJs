@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="email" id="email">
+    <button type="submit">Submit</button>
+
+
+    <div>
+        <p class="result"></p>
+    </div>
+
+    <script>
+        let email = document.querySelector('#email');
+        let button = document.querySelector('button');
+
+        let validData = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        // let isValid = email.value.includes("gmail");
+// 
+
+        button.addEventListener('click', () => {
+            if (email.value.match(validData)) {
+                // alert('valid email');
+                document.querySelector('.result').innerHTML = email.value;
+                return true;
+            }
+            else{
+                // alert('invalid email');
+                document.querySelector('.result').innerHTML = "Invalid email";
+                return false;
+            }
+        })
+    </script>
+</body>
+
+</html>
