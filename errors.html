@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <button onclick="checkInput()">Check</button>
+    <p class="msg"></p>
+
+    <script>
+        let a = document.querySelector('input');
+        let msg = document.querySelector('.msg');
+        msg.innerHTML="";
+
+        function checkInput() {
+            try {
+                if (a.value === "") throw "empty";
+                else {
+                    throw a.value;
+                }
+            }
+            catch(error){
+                msg.innerHTML = error;
+            }
+            finally{
+                error;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
