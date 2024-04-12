@@ -13,3 +13,13 @@ console.log(message);
 .catch(error =>{
     console.log(error);
 })
+
+
+
+/*  map method */
+
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map((num) => {
+  return num * 2;
+});
