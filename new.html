@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+            background-color: blanchedalmond;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: violet;
+        }
+
+        a:hover {
+            color: brown;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .container {
+            position: relative;
+            background-color: yellowgreen;
+            width: 500px;
+            height: 450px;
+        }
+
+        h2 {
+            /* position: absolute; */
+            background-color: rebeccapurple;
+            padding: 50px;
+            margin: 30px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="https://google.com">About</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Rent</a></li>
+        </ul>
+    </nav>
+    <div class="sticky">
+        o can stic
+    </div>
+    <div class="container">
+        <h1>hello world</h1>
+        <h2>hello universe</h2>
+    </div>
+
+    <section style="height: 100vh;"></section>
+
+    <script>
+
+
+
+
+
+        //check prime number
+
+        let k = 11;
+        let isPrime = true;
+        for (let i = 2; i < k; i++) {
+
+            debugger;
+            if (k % i == 0) {
+                isPrime = false;
+
+            }
+        }
+
+        if (isPrime) {
+            console.log('prime ' + k)
+        } else {
+            console.log('not prime ' + k)
+        }
+
+    </script>
+</body>
+
+</html>
