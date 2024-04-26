@@ -8,6 +8,10 @@
 // console.log(calculateVolume(5, 6, 4));
 // console.log(insidevalue);
 
+console.log(" ");
+console.log("************ Calculate volume *************")
+console.log(" ");
+
 let volume = (l, b, h) => l * b * h;
 
 console.log(volume(8, 5, 3));
@@ -18,6 +22,10 @@ let isRed = false;
 console.log(color + " " + compare);
 
 // creating an object
+
+console.log(" ");
+console.log("************ Creating object *************")
+console.log(" ");
 
 const person = {
     fname: "Surya",
@@ -83,6 +91,10 @@ console.log(obj2.value);
 
 // switch case statement
 
+console.log(" ");
+console.log("************ Using switch case *************")
+console.log(" ");
+
 let switchNum = 2;
 s
 switch (switchNum) {
@@ -105,6 +117,10 @@ console.log(day);
 
 //for loop
 
+console.log(" ");
+console.log("************ for loop *************")
+console.log(" ");
+
 for (let i = 1; i <= 10; i++) {
     debugger
     if (i % 2 == 0) {
@@ -113,6 +129,10 @@ for (let i = 1; i <= 10; i++) {
 }
 
 //check prime number
+
+console.log(" ");
+console.log("************ Prime number *************")
+console.log(" ");
 
 let k = 2;
 
@@ -148,10 +168,17 @@ for (let i = 2; i <= range; i++) {
     }
 
     if (isPrime) {
+        if (i == 11) {
+            continue;
+        }
         console.log(i);
     }
 }
 
+
+console.log(" ");
+console.log("************ For in loop *************")
+console.log(" ");
 
 let bca = [4, 8, 9];
 
@@ -168,7 +195,7 @@ for (let i in bca) {
 }
 
 for (let j in object) {
-    console.log(j)
+    console.log(object[j])
 }
 
 for (let k in letters) {
@@ -178,10 +205,138 @@ for (let i of bca) {
     console.log(i)
 }
 
-for (let j of object) {
-    console.log(j)
-}
+// for (let j of object) {
+//     console.log(j)
+// }
 
 for (let k of letters) {
     console.log(k)
 }
+
+
+// while loop
+console.log(" ");
+console.log("************ while loop *************")
+console.log(" ");
+
+let wh = 0;
+
+while (wh < 1) {
+    console.log("while");
+    console.log(x);
+    wh++;
+}
+
+
+// do-while loop
+
+do {
+    console.log("Do whiile")
+    console.log(wh);
+    wh++;
+} while (wh < 1)
+
+
+
+
+// anonymous function
+
+var where = function () {
+    console.log("i'm here");
+}
+
+where();
+
+
+// rest parameter 
+console.log(" ");
+console.log("************ rest parameters *************")
+console.log(" ");
+
+function fun(...c) {
+    // console.log(a, 'and', b);
+    for (let i of c) {
+        console.log(i);
+    }
+}
+
+fun('Stark', 'Rogers', 'surya', 'Banner', 'Barton', 'Roamnoff', 'hello')
+
+
+// self executing function
+
+console.log(" ");
+console.log("************ self executing function *************")
+console.log(" ");
+
+
+(function () {
+    console.log("3,2,1,...BOOMMMMMM");
+})();
+
+// nested function
+
+function first(a) {
+    function second(b) {
+        return a + b;
+    }
+
+    return second;
+}
+
+console.log(first(5)(6));
+
+
+
+// recursive function
+console.log(" ");
+console.log("************ Recursive function *************")
+console.log(" ");
+
+let onetoten = (n) => {
+    if (n != 11) {
+        console.log(n);
+        n++;
+        return onetoten(n);
+
+    } else {
+
+        return false;
+    }
+}
+
+onetoten(11);
+
+function checkEven(num) {
+    if (num === 0) {
+        console.log('It is even');
+    } else if (num === 1) {
+        console.log('It is odd')
+    } else {
+        return checkEven(num - 2);
+    }
+
+}
+
+checkEven(11);
+
+console.log(" ");
+console.log("************ Javascript class *************")
+console.log(" ");
+
+class Bca {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    birthday() {
+        console.log("my name is ", this.name)
+        console.log("my age is ", this.age)
+    }
+}
+
+const student = new Bca("surya", 20);
+
+student.birthday();
