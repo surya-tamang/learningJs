@@ -6,90 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-        .sticky {
-            position: sticky;
-            top: 0;
-            z-index: 3;
-            background-color: blanchedalmond;
-        }
-
-        a:link {
-            color: red;
-        }
-
-        a:visited {
-            color: violet;
-        }
-
-        a:hover {
-            color: brown;
-        }
-
-        a:active {
-            color: yellow;
-        }
-
-        .container {
-            position: relative;
-            background-color: yellowgreen;
-            width: 500px;
-            height: 450px;
-        }
-
-        h2 {
-            /* position: absolute; */
-            background-color: rebeccapurple;
-            padding: 50px;
-            margin: 30px;
-            top: 0;
-        }
-    </style>
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="https://google.com">About</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Rent</a></li>
-        </ul>
-    </nav>
-    <div class="sticky">
-        o can stic
-    </div>
-    <div class="container">
-        <h1>hello world</h1>
-        <h2>hello universe</h2>
+
+
+
+    <!-- <div class="container" id="div">
+        <h1 id="hello">hello world</h1>
+        <h2 class="hi">hello universe</h2>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
     </div>
 
-    <section style="height: 100vh;"></section>
+    <div class="container" id="div">
+        <h1 id="hello">hello world</h1>
+        <h2 class="hi">hello universe</h2>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
+    </div>
+
+    <div class="container" id="div">
+        <h1 id="hello">hello world</h1>
+        <h2 class="hi">hello universe</h2>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
+        <p>i am a tag</p>
+    </div>
+
+    <section style="height: 100vh;"></section> -->
 
     <script>
+        // let hello = document.getElementById('hello');
+        // let hi = document.querySelector('.hi');
+        // let byTagName = document.getElementsByTagName("p")
+        // // let byQTagName = document.querySelector('p');
 
+        // let myDiv = document.getElementById('div')
 
+        // const parenNode = byTagName.parentNode;
+        // const firstChild = byTagName.firstChild;
+        // const childNode = byTagName.childNodes;
 
+        // console.log(parenNode);
+        // console.log(firstChild);
+        // console.log(childNode);
 
+        // const pElem = document.createElement('p');
+        // const newText = document.createTextNode('text node');
+        // pElem.appendChild(newText);
 
-        //check prime number
+        // const paragraph = document.body.appendChild(pElem);
 
-        let k = 11;
-        let isPrime = true;
-        for (let i = 2; i < k; i++) {
+        const listItem = ['Home', 'About', 'Service', 'Contact']
 
-            debugger;
-            if (k % i == 0) {
-                isPrime = false;
+        let navTag = document.createElement("nav");
+        let ulTag = document.createElement("ul");
+        document.body.appendChild(navTag);
+        navTag.appendChild(ulTag)
 
-            }
-        }
+        for (let i = 0; i < 4; i++) {
+            let liTag = document.createElement("li");
 
-        if (isPrime) {
-            console.log('prime ' + k)
-        } else {
-            console.log('not prime ' + k)
+            ulTag.appendChild(liTag);
         }
 
     </script>

@@ -331,12 +331,97 @@ class Bca {
         this.age = age;
     }
 
-    birthday() {
+    fullInfo() {
         console.log("my name is ", this.name)
         console.log("my age is ", this.age)
+    }
+
+    static getName() {
+        console.log('his name is ', this.name)
     }
 }
 
 const student = new Bca("surya", 20);
 
-student.birthday();
+// student.birthday();
+
+//array
+
+console.log(" ");
+console.log("************ Array and methods *************")
+console.log(" ");
+
+const arr = [1, 2, 3, 4, 5, 6];
+let sumArray = 0;
+console.log("the total array element is " + arr.length);
+
+arr.forEach((i) => sumArray += i);
+console.log(sumArray);
+
+// let isInclude = arr.includes(4);
+const anotherArr = ["hello", "world", "java", "javascript"]
+console.log(anotherArr.includes("world", 1))
+anotherArr.push("surya")
+console.log(anotherArr);
+
+// anotherArr.pop();
+// console.log(anotherArr);
+
+console.log(anotherArr.slice(1, 3));
+console.log(anotherArr.splice(2, 1, "bibek"));
+console.log(anotherArr);
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2);
+
+console.log(fruit);
+
+fruits.shift();
+
+console.log(fruits);
+
+fruits.unshift("Lemon");
+console.log(fruits);
+
+delete fruits[0];
+console.log(fruits);
+
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+const myChildren = arr1.concat(arr2, arr3);
+
+console.log(myChildren);
+
+console.log(Array.isArray(num));
+
+
+// student.getName();
+
+Bca.getName();
+
+// dom [document object model]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
