@@ -61,18 +61,45 @@
 
         // const paragraph = document.body.appendChild(pElem);
 
-        const listItem = ['Home', 'About', 'Service', 'Contact']
 
         let navTag = document.createElement("nav");
         let ulTag = document.createElement("ul");
+
+        navTag.setAttribute("id", "navBar");
+
+        let pTag = document.createElement("p")
+
+        pTag.setAttribute("id", "paragraph")
+        let textNode = document.createTextNode("Hello hello")
+        pTag.appendChild(textNode);
         document.body.appendChild(navTag);
+        navTag.appendChild(pTag)
         navTag.appendChild(ulTag)
+
+        const listItem = ['Home', 'About', 'Service', 'Contact']
 
         for (let i = 0; i < 4; i++) {
             let liTag = document.createElement("li");
+            let aTag = document.createElement("a");
+
+
+
+            let list = document.createTextNode(listItem[i])
 
             ulTag.appendChild(liTag);
+            liTag.appendChild(aTag);
+
+            aTag.appendChild(list)
         }
+
+        // pTag.innerHTML = "Inner HTML";
+        pTag.innerText = "Inner text";
+
+        let str1 = "hello";
+        let str2 = "hi";
+
+        const sth = `<div>${str1} i am a disco dancer ${str2}</div> `;
+        document.body.innerHTML = sth;
 
     </script>
 </body>
