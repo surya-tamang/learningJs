@@ -11,56 +11,7 @@
 <body>
 
 
-
-
-    <!-- <div class="container" id="div">
-        <h1 id="hello">hello world</h1>
-        <h2 class="hi">hello universe</h2>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-    </div>
-
-    <div class="container" id="div">
-        <h1 id="hello">hello world</h1>
-        <h2 class="hi">hello universe</h2>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-    </div>
-
-    <div class="container" id="div">
-        <h1 id="hello">hello world</h1>
-        <h2 class="hi">hello universe</h2>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-        <p>i am a tag</p>
-    </div>
-
-    <section style="height: 100vh;"></section> -->
-
     <script>
-        // let hello = document.getElementById('hello');
-        // let hi = document.querySelector('.hi');
-        // let byTagName = document.getElementsByTagName("p")
-        // // let byQTagName = document.querySelector('p');
-
-        // let myDiv = document.getElementById('div')
-
-        // const parenNode = byTagName.parentNode;
-        // const firstChild = byTagName.firstChild;
-        // const childNode = byTagName.childNodes;
-
-        // console.log(parenNode);
-        // console.log(firstChild);
-        // console.log(childNode);
-
-        // const pElem = document.createElement('p');
-        // const newText = document.createTextNode('text node');
-        // pElem.appendChild(newText);
-
-        // const paragraph = document.body.appendChild(pElem);
-
 
         let navTag = document.createElement("nav");
         let ulTag = document.createElement("ul");
@@ -93,15 +44,28 @@
         }
 
         // pTag.innerHTML = "Inner HTML";
-        pTag.innerText = "Inner text";
+        // pTag.innerText = "Inner text";
 
         let str1 = "hello";
         let str2 = "hi";
 
-        const sth = `<div>${str1} i am a disco dancer ${str2}</div> `;
+        const sth = `<div class="myClass">${str1} i am a disco dancer ${str2}</div> `;
         document.body.innerHTML = sth;
 
+        // const myStyle = {
+        //     backgroundColor: "red",
+        //     color : "yellow"
+        // }
+
+        document.querySelector('.myClass').style.color = "red"
+        document.querySelector('.myClass').style.fontFamily = "Georgia"
+        document.querySelector('.myClass').style.fontSize = "64px"
+        document.querySelector('.myClass').style.fontWeight = "600"
+
+       
     </script>
+
+    <script src="day7.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 const names = ['layla', 'miya', 'nana', 'kagura'];
 
 let touppercase = names.map(str => str.toUpperCase());
+console.log(names);
 
 console.log(touppercase);
 
