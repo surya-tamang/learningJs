@@ -9,63 +9,27 @@
 </head>
 
 <body>
+    <!-- <button id="btn">Click me</button> -->
 
+    <form action="" id="form">
+        <label for="name">Enter your name :</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="name">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="name">Enter your password :</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 
-    <script>
-
-        let navTag = document.createElement("nav");
-        let ulTag = document.createElement("ul");
-
-        navTag.setAttribute("id", "navBar");
-
-        let pTag = document.createElement("p")
-
-        pTag.setAttribute("id", "paragraph")
-        let textNode = document.createTextNode("Hello hello")
-        pTag.appendChild(textNode);
-        document.body.appendChild(navTag);
-        navTag.appendChild(pTag)
-        navTag.appendChild(ulTag)
-
-        const listItem = ['Home', 'About', 'Service', 'Contact']
-
-        for (let i = 0; i < 4; i++) {
-            let liTag = document.createElement("li");
-            let aTag = document.createElement("a");
-
-
-
-            let list = document.createTextNode(listItem[i])
-
-            ulTag.appendChild(liTag);
-            liTag.appendChild(aTag);
-
-            aTag.appendChild(list)
-        }
-
-        // pTag.innerHTML = "Inner HTML";
-        // pTag.innerText = "Inner text";
-
-        let str1 = "hello";
-        let str2 = "hi";
-
-        const sth = `<div class="myClass">${str1} i am a disco dancer ${str2}</div> `;
-        document.body.innerHTML = sth;
-
-        // const myStyle = {
-        //     backgroundColor: "red",
-        //     color : "yellow"
-        // }
-
-        document.querySelector('.myClass').style.color = "red"
-        document.querySelector('.myClass').style.fontFamily = "Georgia"
-        document.querySelector('.myClass').style.fontSize = "64px"
-        document.querySelector('.myClass').style.fontWeight = "600"
-
-       
-    </script>
+    <p id="user_name"></p>
+    <p id="user_email"></p>
+    <p id="user_pwd"></p>
 
     <script src="day7.js"></script>
+    <script src="event.js"></script>
 </body>
 
 </html>

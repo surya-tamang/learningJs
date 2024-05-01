@@ -56,3 +56,29 @@ console.log(Math.floor(4.6)) //down to its nearest integer
 console.log(Math.sqrt(4.6))  // square root
 console.log(Math.min(1,2,3,1,2,20,9,3))  // smallest
 console.log(Math.max(1,2,3,1,2,20,9,3))  // largest
+
+
+// javascript get date methods
+
+let date = new Date();
+let customDate = new Date();
+
+customDate.setFullYear(2015, 1, 25); // own date
+
+
+
+console.log(customDate);
+
+let year = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDay();
+
+let fullyear = [year, month, day];
+
+console.log(fullyear.toString());
+
+if (date > customDate) {
+    console.log("you are born");
+} else {
+    console.log("You are not born yet");
+}

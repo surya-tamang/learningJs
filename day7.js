@@ -1,9 +1,5 @@
-// alert("hello");
-let message = document.createElement('p');
 
-document.body.appendChild(message);
 
-message.style.fontSize = "25px"
 
 // if (confirm("Is tommorow holiday?")) {
 //     message.innerText = "Tommorow is holiday"
@@ -11,7 +7,7 @@ message.style.fontSize = "25px"
 //     message.innerText = "Tommorow is not holiday "
 // }
 
-document.body.style.height = "300vh"
+// document.body.style.height = "300vh"
 
 
 

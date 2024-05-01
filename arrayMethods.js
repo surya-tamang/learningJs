@@ -20,20 +20,20 @@ console.log(onlyOdds);
 
 /*            \ [Array.Reduce]  /              */
 
-let sum = num.reduce((acc , n)=> acc +  n,0);
+let sum = num.reduce((acc, n) => acc + n, 0);
 console.log(sum);
 
 const strings = ['apple', 'banana', 'orange'];
 const longestString = strings.reduce((accumulator, currentValue) => {
   return currentValue.length > accumulator.length ? currentValue : accumulator;
-// return accumulator + currentValue;
+  // return accumulator + currentValue;
 }, '');
 console.log(longestString);
 
 
 /*            \ [Array.Findindex]  /              */
 
-const findarray = num.findIndex((el)=> el < 2 );
+const findarray = num[num.findIndex((el) => el < 2)];
 console.log(findarray);
 
 /*            \ [Array.pop && push and shift && unshift]  /              */
@@ -53,8 +53,18 @@ console.log(num);
 
 /*            \ [Array.splice && slice]  /              */
 
-num.splice(num.length-1); // removes the element
+num.splice(num.length - 1); // removes the element
 console.log(num);
 
 names.slice();
 console.log(names);
+
+
+              const mySelf = {
+                name: "Surya Tamang",
+                education: "BCA",
+                sex: "Male",
+                address: "Saraswatingar, Kathmandu"
+              }
+
+console.log(mySelf);
