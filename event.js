@@ -1,12 +1,9 @@
 
-// let button = document.querySelector('#btn');
+let button = document.querySelector('#btn');
 
-// button.addEventListener('click', clicked)
-
-// function clicked(e) {
-//     console.log(e);
-//     button.innerText = "you clicked me";
-// }
+button.addEventListener('click', () => {
+    location.href = "https://facebook.com";
+})
 
 
 let form = document.querySelector('#form');
@@ -64,5 +61,24 @@ document.getElementById("email").addEventListener("input", (event) => {
 // mouseover
 
 document.getElementById("name").addEventListener("mouseover", () => {
-    document.getElementById("name").style.border ="5px solid red";
+    document.getElementById("name").style.border = "5px solid red";
 });
+
+
+// location.href = "https://facebook.com"
+// location.reload();
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+} else {
+    console.log("Geo location is not suppored by this browser")
+}
+
+function showPosition(position) {
+    console.log("latitude " + position.coords.latitude + " longitude " + position.coords.longitude)
+}
+
+let text = "total width/height: " + screen.width + "*" + screen.height + " available width/height" + screen.availWidth + '*'
+    + screen.availHeight + " color depth: " + screen.colorDepth  + " color resolution: " + screen.pixelDepth;
+
+console.table(text);

@@ -60,11 +60,15 @@ names.slice();
 console.log(names);
 
 
-              const mySelf = {
-                name: "Surya Tamang",
-                education: "BCA",
-                sex: "Male",
-                address: "Saraswatingar, Kathmandu"
-              }
+const mySelf = {
+  name: "Surya Tamang",
+  education: "BCA",
+  sex: "Male",
+  address: "Saraswatingar, Kathmandu"
+}
 
-console.log(mySelf);
+console.table(mySelf);
+console.table(names);
+
+console.clear();
+console.error("You made a error")
