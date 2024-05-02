@@ -19,7 +19,7 @@ keyEvent.addEventListener('keydown', () => {
 
 keyEvent.addEventListener('focusin', () => {
     keyEvent.style.border = "5px solid blue"
-}) 
+})
 keyEvent.addEventListener('focusout', () => {
     keyEvent.style.border = "1px solid blue"
 })
@@ -44,4 +44,25 @@ function submitted(e) {
     user_pwd.innerText = pwd.value;
 }
 
-//event listener
+
+//change event
+
+document.querySelector('#name').addEventListener("change", handleChange());
+
+function handleChange() {
+    var inputValue = document.querySelector('#name').value;
+    document.getElementById("user_name").innerText = "Value changed to: " + inputValue;
+}
+
+// input event
+
+document.getElementById("email").addEventListener("input", (event) => {
+    document.getElementById("user_email").innerText = event.target.value;
+}
+);
+
+// mouseover
+
+document.getElementById("name").addEventListener("mouseover", () => {
+    document.getElementById("name").style.border ="5px solid red";
+});
